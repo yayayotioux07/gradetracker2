@@ -1,0 +1,150 @@
+.main-content{
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+}
+.company__info{
+	background-color: #7952b3;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+.fa-android{
+	font-size:3em;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
+}
+.row > h2{
+	color:#7952b3;
+}
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+form{
+	padding: 0 2em;
+}
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
+}
+.form__input:focus{
+	border-bottom-color: #7952b3;
+	box-shadow: 0 0 5px rgba(0,80,80,.4);
+	border-radius: 4px;
+}
+.btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#7952b3;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #7952b3;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+.btn:hover, .btn:focus{
+	background-color: #7952b3;
+	color:#fff;
+}
+.btn:hover, .btn:focus{
+	background-color: #7952b3;
+	color:#fff;
+}
+
+.btn2{
+	transition: all .5s ease;
+	width: 10%;
+	border-radius: 10px;
+	color:#7952b3;
+	font-weight: 600;
+	background-color: #fff;
+	border: .5px solid #7952b3;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.btn2:hover, .btn2:focus{
+	background-color: #7952b3;
+	color:#fff;
+}
+.btn2:hover, .btn2:focus{
+	background-color: #7952b3;
+	color:#fff;
+}
+
+
+/* arrow boxes */
+.box {
+  width: 200px;
+  height: 50px;
+  background: #7952b3;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+  display: table;
+}
+
+.box span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.box:before,
+.box:after {
+  content: '';
+  position: absolute;
+}
+
+.box:after {
+  border-left: 25px solid #7952b3;
+  border-right: 25px solid transparent;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  right: -50px;
+  top: 0px;
+  width: 0;
+  height: 0;
+  display: block;
+}
+
+.box:before {
+  border-left: 26px solid white;
+  border-right: 26px solid transparent;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+  left: 0px;
+  top: -1px;
+  width: 0;
+  height: 0;
+  display: block;
+}
