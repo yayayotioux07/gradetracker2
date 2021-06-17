@@ -25,7 +25,7 @@ var barData = [];
   function data(){
     var userId = firebase.auth().currentUser.uid;
     console.log(userId);
-    var ref = database.ref('students/' +userId+'/studentGrades').once("value", snap => {
+    var ref = database.ref('students/' + userId).once("value", snap => {
       // console.log(snap.val())
       var dataRetrieved = snap.val();
       barLabels =  Object.keys(dataRetrieved);
@@ -67,7 +67,7 @@ var barData = [];
       data: {
         labels: barLabels,
         datasets: [{
-          label: 'Student Grade',
+          label: 'Student Grades',
           data: barData,
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
