@@ -101,7 +101,7 @@ var barData = [];
         }]
       },
       options: {
-        responsive: false,
+        responsive: true,
         scales: {
           xAxes: [{
             ticks: {

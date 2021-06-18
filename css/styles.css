@@ -148,3 +148,19 @@ form{
   height: 0;
   display: block;
 }
+
+.canvas {
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+		}
+ @media screen and (min-width: 800px){
+   .container div:first-child{
+  max-width: 50%;
+  float:left;
+}
+.container div:nth-child(2){
+  max-width: 50%;
+  float:left;
+}
+ }
