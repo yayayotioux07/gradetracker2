@@ -42,7 +42,7 @@ var myBarChart = new Chart(ctx, {
     }],
   },
   options: {
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     layout: {
       padding: {
         left: 10,
@@ -67,8 +67,8 @@ var myBarChart = new Chart(ctx, {
       }],
       yAxes: [{
         ticks: {
-          min: 0,
-          max: 15000,
+          min: 25,
+          max: 100,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks

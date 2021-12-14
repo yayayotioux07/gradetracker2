@@ -16,6 +16,7 @@ const auth = firebase.auth();
 
 var barLabels = [];
 var barData = [];
+var lineData =[];
 
 
 
@@ -31,6 +32,7 @@ var barData = [];
       barLabels =  Object.keys(dataRetrieved);
       console.log(barLabels);
       barData =  Object.values(dataRetrieved);
+      lineData =  Object.values(dataRetrieved);
       console.log(barData);
 
       createChart();
@@ -67,6 +69,7 @@ var barData = [];
       data: {
         labels: barLabels,
         datasets: [{
+          scaleOverride: true,
           label: 'Student Grades',
           data: barData,
           backgroundColor: [
@@ -98,9 +101,21 @@ var barData = [];
             'rgba(255, 159, 64, 1)'
           ],
           borderWidth: 1
-        }]
+        },
+        {
+  label: 'Pattern Line', // Name the series
+  data: lineData, // Specify the data values array
+  backgroundColor: '#f443368c',
+  borderColor: '#f443368c',
+
+  borderWidth: 1, // Specify bar border width
+  type: 'line', // Set this data to a line chart
+  fill: false
+}
+      ]
       },
       options: {
+        spanGaps: true,
         responsive: true,
         scales: {
           xAxes: [{
@@ -109,7 +124,7 @@ var barData = [];
               minRotation: 80
             },
               gridLines: {
-              offsetGridLines: true // à rajouter
+              offsetGridLines: false // à rajouter
             }
           },
           {
@@ -119,13 +134,15 @@ var barData = [];
               minRotation: 80
             },
             gridLines: {
-              offsetGridLines: true // et matcher pareil ici
+              offsetGridLines: false // et matcher pareil ici
             }
           }],
           yAxes: [{
             ticks: {
-              beginAtZero: true
-            }
+              beginAtZero: true,
+              min: 0,
+              suggestedMax: 100
+             }
           }]
         }
       }
